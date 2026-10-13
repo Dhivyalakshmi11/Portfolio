@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhivyalakshmi A | IT Student & Aspiring Cybersecurity Professional</title>
+<meta name="description" content="Portfolio of Dhivyalakshmi A, a second-year B.Tech IT student at Dr.MCET learning cybersecurity and building practical projects.">
+<meta property="og:title" content="Dhivyalakshmi A | Cybersecurity Student Portfolio">
+<meta property="og:description" content="Second-year IT student exploring cybersecurity, secure authentication and cloud security.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 8 14v16c0 15 10 26 24 30 14-4 24-15 24-30V14z' fill='%230a1226' stroke='%233da5ff' stroke-width='3'/%3E%3Ctext x='32' y='38' font-size='20' font-family='Arial' font-weight='bold' fill='%23fff' text-anchor='middle'%3EDA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05070d;--bg2:#0a0f1c;--text:#e8eefc;--muted:#8d9ab8;--blue:#2f6bff;--cyan:#3da5ff;--green:#3ddc84;--amber:#ffb23d;--glass:rgba(18,26,48,.55);--line:rgba(120,160,255,.18);--r:24px}
+[data-theme=light]{--bg:#f2f6ff;--bg2:#e6edfb;--text:#0b1430;--muted:#4a5a80;--blue:#1f56e0;--cyan:#0b6fd6;--glass:rgba(255,255,255,.75);--line:rgba(30,70,170,.2)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Outfit,system-ui,sans-serif;background:radial-gradient(900px 500px at 80% -5%,rgba(47,107,255,.22),transparent),radial-gradient(700px 500px at -10% 40%,rgba(61,165,255,.1),transparent),var(--bg);background-attachment:fixed;color:var(--text);line-height:1.6;font-weight:300}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--bg2);padding:8px 14px;z-index:99}
+.wrap{max-width:1160px;margin:auto;padding:80px 22px 0}
+.glass{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.card{border-radius:var(--r);padding:26px}
+.muted{color:var(--muted)}
+/* nav */
+.nav-wrap{position:fixed;top:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 14px}
+.nav{display:flex;align-items:center;gap:10px;border-radius:999px;padding:8px 10px 8px 22px;max-width:100%}
+.logo{text-decoration:none;font-weight:500;margin-right:14px;white-space:nowrap}
+.menu{display:flex;gap:2px;list-style:none;padding:0}
+.menu a{display:block;text-decoration:none;font-size:.88rem;padding:7px 14px;border-radius:999px;color:var(--muted);transition:.2s}
+.menu a:hover{color:var(--text)}
+.menu a.active{color:#fff;background:linear-gradient(135deg,#1d3f9e,var(--blue));box-shadow:0 0 18px rgba(47,107,255,.55)}
+.icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--glass);color:var(--text);cursor:pointer;font-size:1rem}
+.icon-btn:hover{box-shadow:0 0 14px rgba(61,165,255,.45)}
+.burger{display:none}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;min-height:100vh;padding-top:120px}
+.term{font-family:ui-monospace,Consolas,monospace;color:var(--green);font-size:.9rem;min-height:1.6em;margin-bottom:12px}
+.caret{animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;line-height:1.1;letter-spacing:-.02em}
+.hero h2{font-size:clamp(1.05rem,2vw,1.35rem);font-weight:400;color:var(--cyan);margin:14px 0 18px}
+.lead{color:var(--muted);max-width:60ch;font-size:1.05rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 16px}
+.btn{display:inline-block;text-decoration:none;padding:12px 24px;border-radius:999px;border:1px solid var(--line);background:var(--glass);font-weight:400;cursor:pointer;color:var(--text);font-family:inherit;font-size:1rem;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(47,107,255,.35)}
+.btn.primary{background:linear-gradient(135deg,#1d3f9e,var(--blue));border-color:transparent;color:#fff}
+.btn[aria-disabled=true]{opacity:.45;cursor:not-allowed;pointer-events:none}
+.link-sm{font-size:.9rem;color:var(--cyan)}
+.globe-box{position:relative;aspect-ratio:1;max-width:520px;width:100%;margin-inline:auto}
+#globe{width:100%;height:100%;display:block}
+.shield{position:absolute;inset:0;margin:auto;width:23%;filter:drop-shadow(0 0 18px #2f6bff)}
+.ring{fill:rgba(10,18,50,.8);stroke:var(--cyan);stroke-width:1.5}
+.chip{position:absolute;padding:6px 14px;border-radius:999px;font-size:.78rem;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(8px);box-shadow:0 0 16px rgba(47,107,255,.25)}
+.c1{top:8%;left:2%}.c2{top:14%;right:0}.c3{bottom:20%;left:-2%}.c4{bottom:6%;right:4%}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);margin-right:8px}
+.strip{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);border-radius:var(--r);padding:18px 10px;text-align:center}
+.strip b{display:block;font-size:1.6rem;font-weight:300}.strip span{font-size:.82rem;color:var(--muted)}
+/* sections */
+.sec{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:300;margin-bottom:28px;letter-spacing:-.01em}
+.sub{font-weight:400;margin:34px 0 14px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.quals{list-style:none;padding:0;margin-top:16px;display:grid;gap:10px}
+.quals li{display:flex;gap:12px;align-items:flex-start}
+.quals i{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.8rem;background:rgba(47,107,255,.18);box-shadow:0 0 12px rgba(47,107,255,.4)}
+.quote{display:flex;align-items:center;font-size:1.25rem;font-weight:300;background:linear-gradient(160deg,rgba(47,107,255,.2),var(--glass))}
+.grid2,.grid3,.grid4{display:grid;gap:18px}
+.grid2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.grid3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.grid4{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.card h3{font-weight:400;font-size:1.15rem;margin-bottom:12px}
+.tags{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.82rem;padding:5px 12px;border-radius:999px;border:1px solid var(--line);display:inline-flex;gap:8px;align-items:center}
+.tag small{font-size:.68rem;color:var(--cyan)}
+.tag.learning small{color:var(--amber)}
+.hov{transition:.25s}.hov:hover{transform:translateY(-4px);border-color:rgba(61,165,255,.5);box-shadow:0 10px 34px rgba(47,107,255,.2)}
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filters button{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--muted);cursor:pointer;font-family:inherit}
+.filters button[aria-pressed=true]{color:#fff;background:linear-gradient(135deg,#1d3f9e,var(--blue));border-color:transparent}
+.thumb{height:120px;border-radius:16px;margin-bottom:16px;background:radial-gradient(circle at 30% 30%,rgba(61,165,255,.35),transparent 60%),#0a1226;display:grid;place-items:center;font-size:2.4rem;border:1px solid var(--line)}
+.status{font-size:.75rem;padding:3px 10px;border-radius:999px;border:1px solid var(--amber);color:var(--amber);float:right}
+.pcard p{color:var(--muted);margin-bottom:12px;font-size:.95rem}
+.pcard .btns{margin:16px 0 0}.pcard .btn{padding:9px 18px;font-size:.9rem}
+/* roadmap */
+.roadmap{list-style:none;padding:0 0 0 22px;border-left:1px solid var(--line);display:grid;gap:14px}
+.roadmap li{position:relative;padding:16px 20px}
+.roadmap li::before{content:"";position:absolute;left:-29px;top:24px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan)}
+.roadmap li[data-s=Learning]::before{background:var(--green);border-color:var(--green);box-shadow:0 0 10px var(--green)}
+.roadmap li[data-s=Completed]::before{background:var(--cyan)}
+.roadmap span{float:right;font-size:.75rem;color:var(--muted)}
+.statement{margin:28px 0;font-size:1.2rem;max-width:64ch;color:var(--muted);border-left:3px solid var(--blue);padding-left:18px}
+.edu dl{display:grid;grid-template-columns:auto 1fr;gap:6px 24px}.edu dt{color:var(--muted)}.edu dd{margin:0}
+.empty{color:var(--muted);font-style:italic}
+/* form */
+.form{margin-top:10px;max-width:620px;display:grid;gap:14px}
+.form label{display:grid;gap:6px;font-size:.9rem;color:var(--muted)}
+.form input,.form textarea{background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:12px;padding:11px 14px;color:var(--text);font:inherit}
+.form .err{border-color:#ff6b6b}
+#formMsg{min-height:1.4em;font-size:.9rem}
+.foot{margin-top:90px;border-top:1px solid var(--line);padding:30px 0 40px;text-align:center}
+.foot .wrap{padding-top:0}.foot nav{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:12px 0;font-size:.9rem}
+.foot a{color:var(--muted);text-decoration:none}.foot a:hover{color:var(--cyan)}
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(2,4,10,.75);display:grid;place-items:center;padding:18px}
+.modal[hidden]{display:none}
+.modal-box{position:relative;max-width:720px;width:100%;max-height:88vh;overflow:auto;border-radius:var(--r);padding:30px;background:var(--bg2)}
+.modal .close{position:absolute;top:14px;right:14px}
+.modal h4{margin:18px 0 4px;font-weight:500;color:var(--cyan)}
+.modal p,.modal li{color:var(--muted)}.modal ul{padding-left:20px}
+.ph{color:var(--amber)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .hero,.about{grid-template-columns:1fr}.hero{padding-top:110px}.globe-box{max-width:380px}
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:66px;left:14px;right:14px;flex-direction:column;background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:10px}
+  .menu.open{display:flex}
+  .strip{grid-template-columns:repeat(2,1fr);gap:14px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+/* Added profile links */
+.profile-links{margin-top:8px}
+.profile-links .btn{font-size:.9rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#home">Skip to content</a>
+
+<header class="nav-wrap">
+  <nav class="nav glass" aria-label="Main">
+    <a href="#home" class="logo">Dhivyalakshmi A</a>
+    <ul id="menu" class="menu">
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li><li><a href="#certifications">Certifications</a></li>
+      <li><a href="#certifications">Achievements</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme" class="icon-btn" aria-label="Switch to light theme" title="Toggle theme">◐</button>
+    <button id="burger" class="icon-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero wrap">
+  <div class="hero-text">
+    <p class="term" aria-live="polite"><span id="typed"></span><span class="caret">▍</span></p>
+    <h1>Hi, I'm Dhivyalakshmi A</h1>
+    <h2>IT Student | Aspiring Cybersecurity Professional</h2>
+    <p class="lead">I'm a second-year Information Technology student passionate about cybersecurity and technology. I'm continuously learning new concepts, strengthening my technical foundation, and exploring how to build more secure digital systems.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">Explore My Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+    <div class="btns profile-links" aria-label="Professional profiles">
+      <a class="btn" href="https://github.com/Dhivyalakshmi11" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/dhivyalakshmi-anandhakumar-738271386/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="globe-box" aria-hidden="true">
+    <canvas id="globe" width="560" height="560"></canvas>
+    <svg class="shield" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" class="ring"/><path d="M32 14 18 20v10c0 9 6 16 14 19 8-3 14-10 14-19V20z" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="32" cy="31" r="3.5" fill="#3da5ff"/></svg>
+    <span class="chip c1">Python</span><span class="chip c2">Flask</span><span class="chip c3">Linux</span><span class="chip c4"><i class="dot"></i>Cybersecurity learner</span>
+  </div>
+  <div class="strip glass">
+    <div><b>4</b><span>Programming languages</span></div>
+    <div><b>2</b><span>Featured projects</span></div>
+    <div><b>Year 2</b><span>B.Tech IT</span></div>
+    <div><b>Learning</b><span>Cybersecurity</span></div>
+  </div>
+</section>
+
+<section id="about" class="wrap">
+  <h2 class="sec">A Little About Me</h2>
+  <div class="about">
+    <div class="glass card">
+      <p>I'm an IT student exploring cybersecurity and building my technical abilities through continuous learning and hands-on projects. I like understanding how systems work, and then how they can be made safer.</p>
+      <ul id="qualities" class="quals"></ul>
+    </div>
+    <blockquote class="glass card quote">"My goal is to build a strong foundation in cybersecurity, gain practical experience, and gradually develop the skills needed to contribute to making digital systems safer."</blockquote>
+  </div>
+</section>
+
+<section id="skills" class="wrap">
+  <h2 class="sec">My Technical Skills</h2>
+  <div id="skillGrid" class="grid3"></div>
+</section>
+
+<section id="projects" class="wrap">
+  <h2 class="sec">Projects I've Worked On</h2>
+  <div id="filters" class="filters" role="group" aria-label="Filter projects"></div>
+  <div id="projectGrid" class="grid2"></div>
+</section>
+
+<section id="learning" class="wrap">
+  <h2 class="sec"><i class="dot"></i>Currently Learning</h2>
+  <ol id="roadmap" class="roadmap"></ol>
+  <p class="statement">Cybersecurity is a continuous learning journey. I believe in strengthening the fundamentals, practising what I learn, and improving one step at a time.</p>
+  <div class="glass card"><h3>Currently exploring</h3><ul id="exploring" class="tags"></ul></div>
+</section>
+
+<section id="certifications" class="wrap">
+  <h2 class="sec">Certifications &amp; Achievements</h2>
+  <div id="certGrid" class="grid3"></div>
+  <h3 class="sub">Hackathons, Workshops &amp; Events</h3>
+  <div id="eventGrid" class="grid3"></div>
+</section>
+
+<section id="education" class="wrap">
+  <h2 class="sec">Education</h2>
+  <div class="glass card edu">
+    <h3>Dr. Mahalingam College of Engineering and Technology (Dr.MCET)</h3>
+    <dl><dt>Degree</dt><dd>Bachelor of Technology (B.Tech)</dd><dt>Department</dt><dd>Information Technology</dd><dt>Current year</dt><dd>Second Year</dd><dt>Started</dt><dd>2025</dd></dl>
+  </div>
+</section>
+
+<section id="defines" class="wrap">
+  <h2 class="sec">What Defines Me</h2>
+  <div id="traits" class="grid4"></div>
+</section>
+
+<section id="contact" class="wrap">
+  <h2 class="sec">Let's Connect</h2>
+  <p class="lead">I'm always interested in learning, collaborating on meaningful projects, and connecting with people in technology.</p>
+  <div class="btns" id="contactLinks"></div>
+  <form id="form" class="glass card form" novalidate>
+    <label>Name<input name="name" required autocomplete="name"></label>
+    <label>Email<input name="email" type="email" required autocomplete="email"></label>
+    <label>Message<textarea name="message" rows="4" required></textarea></label>
+    <p id="formMsg" role="status"></p>
+    <button class="btn primary" type="submit">Send message</button>
+  </form>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Designed and built by Dhivyalakshmi A</p>
+    <nav aria-label="Footer" id="footNav"></nav>
+    <p class="muted">Always learning. Always building. Always improving.</p>
+    <p class="muted">&copy; <span id="year"></span> Dhivyalakshmi A</p>
+  </div>
+</footer>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-box glass" role="dialog" aria-modal="true" aria-labelledby="mTitle" tabindex="-1">
+    <button class="icon-btn close" id="mClose" aria-label="Close">✕</button>
+    <div id="mBody"></div>
+  </div>
+</div>
+<script>
+/* ============ EDIT YOUR CONTENT HERE ============ */
+const SITE = {
+  email: "",            // Add your preferred public email address
+  linkedin: "https://www.linkedin.com/in/dhivyalakshmi-anandhakumar-738271386/",
+  github: "https://github.com/Dhivyalakshmi11",
+  resume: "",
+  formEndpoint: ""      // e.g. Formspree/Web3Forms URL. Leave empty until you set one up.
+};
+
+const QUALITIES = [
+  "Quick learner who enjoys understanding new technologies",
+  "Adaptable to different environments and challenges",
+  "Interested in cybersecurity and secure software development",
+  "Motivated to improve through practical implementation",
+  "Open to collaborating and learning from new experiences"
+];
+
+// level: "Comfortable" or "Learning"  (change as you grow)
+const SKILLS = {
+  "Programming Languages": [["C","Comfortable"],["C++","Comfortable"],["Python","Comfortable"],["Java","Comfortable"]],
+  "Cybersecurity Learning": [["Cybersecurity fundamentals","Learning"],["Information security concepts","Learning"],["Authentication & authorization","Learning"],["Password security & hashing","Learning"],["Basic security testing concepts","Learning"],["Networking & Linux fundamentals","Learning"]],
+  "Tools & Technologies": [["Git & GitHub","Comfortable"],["Flask","Comfortable"],["SQLite","Comfortable"],["Linux command-line basics","Learning"]]
+  // Add ["Arduino IDE","Comfortable"] only if you showcase a related project.
+};
+
+// status: "Completed" | "Prototype" | "In Progress"  | github: paste repo URL (empty = "Link coming soon")
+const PROJECTS = [
+  {
+    title: "SecureLogin: Secure Login System", icon: "🔐", category: "Cybersecurity",
+    status: "Completed", // EDIT: confirm status
+    github: "https://github.com/Dhivyalakshmi11/SecureLogin", demo: "",
+    desc: "A Flask-based login application developed to explore secure authentication and user management. The project includes user registration, login validation, password hashing, session management, logout functionality, and protection against common SQL injection risks.",
+    tech: ["Python","Flask","SQLite","HTML","CSS"],
+    details: {
+      Problem: "[EDIT: e.g. Many beginner apps store passwords insecurely or build SQL queries unsafely.]",
+      Objective: "Explore secure authentication and user management.",
+      Approach: "[EDIT: describe your design, e.g. hashing, sessions, parameterized queries.]",
+      Implementation: ["User registration","Login validation","Password hashing","Session management","Logout","Protection against common SQL injection risks"],
+      "Lessons learned": "[EDIT: what you learned]"
+    }
+  },
+  {
+    title: "AI-Based Fake Identity and Document Screening System", icon: "🪪", category: "AI/ML",
+    status: "Prototype", // EDIT: confirm status
+    github: "https://github.com/dhivyalakshmi11/PassportVerification", demo: "",
+    desc: "A prototype designed to explore how document processing and AI-assisted analysis can help identify potentially suspicious identity documents. The proposed workflow includes document upload, OCR, authenticity checks, tampering analysis, and risk-based screening.",
+    tech: ["Python","Streamlit","OCR"],
+    details: {
+      Problem: "[EDIT: describe the problem of fake or tampered identity documents.]",
+      Objective: "Explore how AI-assisted analysis can flag potentially suspicious documents.",
+      Approach: "Proposed workflow: upload, OCR, authenticity checks, tampering analysis, risk-based screening.",
+      "Implemented vs. proposed": [
+        "Document upload: [EDIT: Implemented / Experimental / Planned]",
+        "OCR: [EDIT: Implemented / Experimental / Planned]",
+        "Authenticity checks: [EDIT: Implemented / Experimental / Planned]",
+        "Tampering analysis: [EDIT: Implemented / Experimental / Planned]",
+        "Risk-based screening: [EDIT: Implemented / Experimental / Planned]"
+      ],
+      "Lessons learned": "[EDIT: what you learned]"
+    }
+  }
+];
+
+// status: "Learning" | "Planned" | "Completed"
+const ROADMAP = [
+  ["Networking fundamentals: IP addresses, DNS, ports, TCP/UDP, firewalls","Learning"],
+  ["Linux fundamentals and command-line operations","Learning"],
+  ["Authentication, authorization, permissions, and access control","Learning"],
+  ["Password security and secure authentication","Learning"],
+  ["Cloud security fundamentals","Planned"]
+];
+const EXPLORING = ["Networking basics","Linux command line","Secure authentication"]; // add courses, labs, milestones
+
+const CERTS = [
+  {
+    name: "Business Fundamentals for Entrepreneurs",
+    issuer: "NPTEL",
+    date: "Completed",
+    description: "Completed a course introducing business fundamentals, entrepreneurial thinking, and the basics of understanding and developing business ideas.",
+    link: ""
+  },
+  {
+    name: "C Programming — Part 1",
+    issuer: "Programming course",
+    date: "Completed",
+    description: "Built an introductory understanding of C programming, including core syntax, variables, operators, and foundational problem-solving concepts.",
+    link: ""
+  },
+  {
+    name: "Robotics — Beginner Level 1",
+    issuer: "Robotics course",
+    date: "Completed",
+    description: "Explored beginner-level robotics concepts and gained introductory exposure to how robotic systems and components work.",
+    link: ""
+  },
+  {
+    name: "ATL Lab Course",
+    issuer: "ATL Lab",
+    date: "Completed",
+    description: "Participated in a hands-on lab learning experience focused on exploring technology, experimentation, and practical problem-solving.",
+    link: ""
+  }
+];
+const EVENTS = [
+  {
+    name: "Neuro Hack — Smart Bus Management System",
+    issuer: "Hackathon / event participation",
+    date: "Participated",
+    description: "Worked on or explored a Smart Bus Management System concept as part of a hackathon-style technology event.",
+    link: ""
+  },
+  {
+    name: "Robocart",
+    issuer: "Event participation",
+    date: "Participated",
+    description: "Took part in a Robocart event, gaining exposure to hands-on technical activities and collaborative learning.",
+    link: ""
+  },
+  {
+    name: "KPR College Events",
+    issuer: "College event participation",
+    date: "Participated",
+    description: "Participated in college-level technical events and activities, gaining experience in presenting ideas and learning alongside other students.",
+    link: ""
+  },
+  {
+    name: "Smart India Hackathon (SIH) 2026",
+    issuer: "Hackathon",
+    date: "Level 1 shortlist (as listed in resume)",
+    description: "Advanced to the Level 1 shortlist with a technology-based project, as recorded in the resume.",
+    link: ""
+  }
+];
+
+const TRAITS = [
+  ["Quick Learner","I enjoy exploring unfamiliar concepts and learning new technical skills."],
+  ["Adaptable","I can adjust to new environments, tools, and challenges."],
+  ["Curious Mind","I like understanding how technology works and how it can be improved."],
+  ["Growth Mindset","I am committed to consistent learning, practice, and improvement."]
+];
+/* ============ END OF EDITABLE CONTENT ============ */
+
+const $ = (s) => document.querySelector(s);
+const el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h !== undefined) e.innerHTML = h; return e; };
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const ph = (s) => esc(s).replace(/\[EDIT[^\]]*\]/g, (m) => `<span class="ph">${m}</span>`);
+const link = (label, url, cls = "btn") => url
+  ? `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
+  : `<a class="${cls}" aria-disabled="true" title="Link coming soon">${label} (soon)</a>`;
+
+/* qualities, skills, traits */
+$("#qualities").innerHTML = QUALITIES.map((q) => `<li><i>✦</i><span>${esc(q)}</span></li>`).join("");
+$("#skillGrid").innerHTML = Object.entries(SKILLS).map(([cat, list]) =>
+  `<div class="glass card hov reveal"><h3>${esc(cat)}</h3><ul class="tags">${list.map(([n, l]) =>
+    `<li class="tag ${l.toLowerCase()}">${esc(n)}<small>${l}</small></li>`).join("")}</ul></div>`).join("");
+$("#traits").innerHTML = TRAITS.map(([t, d]) => `<div class="glass card hov reveal"><h3>${t}</h3><p class="muted">${d}</p></div>`).join("");
+
+/* projects */
+const grid = $("#projectGrid"), filters = $("#filters");
+const cats = ["All", ...new Set(PROJECTS.map((p) => p.category)), ...["Hardware"].filter((c) => !PROJECTS.some((p) => p.category === c))];
+function renderProjects(cat = "All") {
+  filters.innerHTML = cats.map((c) => `<button aria-pressed="${c === cat}" data-c="${c}">${c}</button>`).join("");
+  const list = PROJECTS.filter((p) => cat === "All" || p.category === cat);
+  grid.innerHTML = list.length ? "" : `<p class="empty">No projects in this category yet.</p>`;
+  list.forEach((p) => {
+    const c = el("article", "glass card hov pcard", `
+      <div class="thumb" aria-hidden="true">${p.icon}</div>
+      <span class="status">${esc(p.status)}</span><h3>${esc(p.title)}</h3>
+      <p>${esc(p.desc)}</p>
+      <ul class="tags">${p.tech.map((t) => `<li class="tag">${esc(t)}</li>`).join("")}</ul>
+      <div class="btns"><button class="btn primary" type="button">View Project</button>${link("GitHub", p.github)}${p.demo ? link("Live Demo", p.demo) : ""}</div>`);
+    c.querySelector("button").onclick = (e) => openModal(p, e.target);
+    grid.append(c);
+  });
+}
+filters.onclick = (e) => { if (e.target.dataset.c) renderProjects(e.target.dataset.c); };
+renderProjects();
+
+/* modal with focus handling */
+const modal = $("#modal"), box = modal.querySelector(".modal-box");
+let lastFocus;
+function openModal(p, from) {
+  lastFocus = from;
+  $("#mBody").innerHTML = `<span class="status" style="margin-right:44px">${esc(p.status)}</span><h3 id="mTitle">${esc(p.title)}</h3>
+    <p style="margin-top:8px">${esc(p.desc)}</p>
+    <h4>Technologies</h4><p>${p.tech.map(esc).join(", ")}</p>` +
+    Object.entries(p.details).map(([k, v]) => `<h4>${esc(k)}</h4>` +
+      (Array.isArray(v) ? `<ul>${v.map((i) => `<li>${ph(i)}</li>`).join("")}</ul>` : `<p>${ph(v)}</p>`)).join("") +
+    `<div class="btns">${link("GitHub", p.github)}</div>`;
+  modal.hidden = false; document.body.style.overflow = "hidden"; box.focus();
+}
+function closeModal() { modal.hidden = true; document.body.style.overflow = ""; lastFocus && lastFocus.focus(); }
+$("#mClose").onclick = closeModal;
+modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+document.addEventListener("keydown", (e) => {
+  if (modal.hidden) return;
+  if (e.key === "Escape") closeModal();
+  if (e.key === "Tab") { // simple focus trap
+    const f = [...box.querySelectorAll("button,a[href]")]; if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
+
+/* learning, certs */
+$("#roadmap").innerHTML = ROADMAP.map(([t, s]) => `<li class="glass card reveal" data-s="${s}"><span>${s}</span>${esc(t)}</li>`).join("");
+$("#exploring").innerHTML = EXPLORING.map((t) => `<li class="tag">${esc(t)}</li>`).join("");
+const certCard = (c) => `<div class="glass card hov reveal"><h3>${esc(c.name)}</h3><p class="muted">${esc(c.issuer)}</p>
+  <p class="muted">${esc(c.date)}</p><p>${esc(c.description || "")}</p>
+  ${c.link ? `<p style="margin-top:12px">${link(c.name.toLowerCase().includes("hack") || c.name.toLowerCase().includes("robocart") ? "View event link" : "View certificate", c.link, "link-sm")}</p>` : ""}</div>`;
+$("#certGrid").innerHTML = CERTS.map(certCard).join("") || `<p class="empty">Certificates will be added here.</p>`;
+$("#eventGrid").innerHTML = EVENTS.map(certCard).join("") || `<p class="empty">Details will be added as I participate.</p>`;
+
+/* contact links + footer + resume */
+const cl = [];
+if (SITE.email) cl.push(`<a class="btn primary" href="mailto:${esc(SITE.email)}">Email me</a>`);
+if (SITE.linkedin) cl.push(link("LinkedIn", SITE.linkedin));
+if (SITE.github) cl.push(link("GitHub", SITE.github));
+$("#contactLinks").innerHTML = cl.join("") || `<p class="empty">Add your email, LinkedIn and GitHub in script.js (SITE).</p>`;
+$("#footNav").innerHTML = ["Home","About","Skills","Projects","Certifications","Education","Contact"].map((n) => `<a href="#${n.toLowerCase()}">${n}</a>`).join("")
+  + (SITE.github ? link("GitHub", SITE.github, "") : "") + (SITE.linkedin ? link("LinkedIn", SITE.linkedin, "") : "");
+$("#year").textContent = new Date().getFullYear();
+
+/* contact form: real submission only */
+const form = $("#form"), msg = $("#formMsg");
+if (!SITE.formEndpoint) { form.querySelector("button").disabled = true; msg.textContent = "Contact form not configured yet. Please use the email or social links."; }
+form.onsubmit = async (e) => {
+  e.preventDefault(); let ok = true;
+  form.querySelectorAll("input,textarea").forEach((i) => { const bad = !i.value.trim() || (i.type === "email" && !/^\S+@\S+\.\S+$/.test(i.value)); i.classList.toggle("err", bad); if (bad) ok = false; });
+  if (!ok) { msg.textContent = "Please fill in every field with a valid email address."; return; }
+  msg.textContent = "Sending...";
+  try {
+    const r = await fetch(SITE.formEndpoint, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) });
+    if (!r.ok) throw 0;
+    msg.textContent = "Message sent. Thank you!"; form.reset();
+  } catch { msg.textContent = "Could not send the message. Please try again or email me directly."; }
+};
+
+/* nav: burger, theme, active link */
+const menu = $("#menu"), burger = $("#burger");
+burger.onclick = () => { const o = menu.classList.toggle("open"); burger.setAttribute("aria-expanded", o); };
+menu.onclick = (e) => { if (e.target.tagName === "A") { menu.classList.remove("open"); burger.setAttribute("aria-expanded", false); } };
+const tb = $("#theme");
+const saved = (() => { try { return localStorage.getItem("theme"); } catch { return null; } })();
+const setTheme = (t) => { document.documentElement.dataset.theme = t; tb.setAttribute("aria-label", `Switch to ${t === "dark" ? "light" : "dark"} theme`); try { localStorage.setItem("theme", t); } catch {} };
+if (saved) setTheme(saved);
+tb.onclick = () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+const links = [...menu.querySelectorAll("a")];
+const spy = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) links.forEach((l) => l.classList.toggle("active", l.getAttribute("href") === "#" + x.target.id)); }), { rootMargin: "-45% 0px -50% 0px" });
+links.forEach((l) => { const s = document.querySelector(l.getAttribute("href")); s && spy.observe(s); });
+
+/* scroll reveal */
+const rv = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add("in"); rv.unobserve(x.target); } }), { threshold: .1 });
+document.querySelectorAll(".reveal").forEach((n) => reduced ? n.classList.add("in") : rv.observe(n));
+
+/* terminal greeting */
+const line = "whoami → Dhivyalakshmi A", tEl = $("#typed");
+if (reduced) tEl.textContent = line; else { let i = 0; const t = setInterval(() => { tEl.textContent = line.slice(0, ++i); if (i >= line.length) clearInterval(t); }, 70); }
+
+/* dotted globe (canvas) */
+(function () {
+  const cv = $("#globe"), ctx = cv.getContext("2d"), W = cv.width, R = W * .36, C = W / 2;
+  const pts = [], N = 700;
+  for (let i = 0; i < N; i++) { const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), th = i * 2.399963; pts.push([Math.cos(th) * r, y, Math.sin(th) * r]); }
+  const nodes = [[.6,.3,.74,0],[-.7,-.2,.68,1],[.2,-.7,.69,0],[-.3,.75,.59,0],[.85,-.1,-.5,1]];
+  const rot = (p, a, t) => [p[0] * Math.cos(a) + p[2] * Math.sin(a), p[1] * Math.cos(t) - (p[2] * Math.cos(a) - p[0] * Math.sin(a)) * Math.sin(t), p[1] * Math.sin(t) + (p[2] * Math.cos(a) - p[0] * Math.sin(a)) * Math.cos(t)];
+  let a = 0, visible = true;
+  new IntersectionObserver((e) => visible = e[0].isIntersecting).observe(cv);
+  function draw() {
+    ctx.clearRect(0, 0, W, W);
+    const g = ctx.createRadialGradient(C, C, R * .2, C, C, R * 1.5); g.addColorStop(0, "rgba(47,107,255,.35)"); g.addColorStop(1, "transparent");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, W);
+    ctx.strokeStyle = "rgba(61,165,255,.35)"; ctx.lineWidth = 1.5;
+    [[1.18, .5], [1.32, -.6]].forEach(([s, tilt]) => { ctx.beginPath(); ctx.ellipse(C, C, R * s, R * s * .35, tilt, 0, 6.3); ctx.stroke(); });
+    pts.forEach((p) => { const q = rot(p, a, .35); if (q[2] < -.05) return; ctx.fillStyle = `rgba(${90 + 60 * q[2] | 0},${160 + 60 * q[2] | 0},255,${.25 + .6 * q[2]})`; ctx.fillRect(C + q[0] * R, C + q[1] * R, 2.2, 2.2); });
+    nodes.forEach(([x, y, z, amber]) => { const q = rot([x, y, z], a, .35); if (q[2] < 0) return; const pulse = reduced ? 1 : 1 + .4 * Math.sin(a * 6 + x * 9); ctx.fillStyle = amber ? "#ffb23d" : "#3da5ff"; ctx.shadowColor = ctx.fillStyle; ctx.shadowBlur = 14; ctx.beginPath(); ctx.arc(C + q[0] * R, C + q[1] * R, 4 * pulse, 0, 6.3); ctx.fill(); ctx.shadowBlur = 0; });
+    if (!reduced) { if (visible) a += .004; requestAnimationFrame(draw); }
+  }
+  draw();
+})();
+
+</script>
+</body>
+</html>
